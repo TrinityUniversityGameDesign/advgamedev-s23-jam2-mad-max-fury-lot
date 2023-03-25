@@ -387,7 +387,7 @@ public class PrometeoCarController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 currAngle = transform.GetChild(0).rotation.eulerAngles;
-        currAngle = new Vector3(currAngle.x, currAngle.y, localVelocityX * 2);
+        currAngle = new Vector3(currAngle.x, currAngle.y, Math.Clamp(localVelocityX, -5, 5));
         transform.GetChild(0).rotation = Quaternion.Euler(currAngle);
     }
 
