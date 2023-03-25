@@ -87,19 +87,14 @@ public class GameManager : MonoBehaviour
         switch (Instance._state)
         {
             case GameState.StartScreen:
-                Debug.Log("Entering Start Screen");
                 break;
             case GameState.Paused:
-                Debug.Log("Entering Paused");
                 break;
             case GameState.Racing:
-                Debug.Log("Entering Race");
                 break;
             case GameState.Upgrade:
-                Debug.Log("Entering Upgrade");
                 break;
             case GameState.Race_Select:
-                Debug.Log("Entering Race Select");
                 break;
             default:
                 break;
@@ -115,6 +110,7 @@ public class GameManager : MonoBehaviour
         {
             case GameState.StartScreen:
                 StartScreenEnter.Invoke();
+                Debug.Log("Entering Start Screen");
                 break;
             case GameState.Paused:
                 PausedEnter.Invoke();
