@@ -46,8 +46,8 @@ public class EnemyController : MonoBehaviour
             Debug.Log("position to go to " + waypoints[currentWaypointIndex].position);
 
             agent.SetDestination(waypoints[currentWaypointIndex].position);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), rotationSpeed * Time.deltaTime);
-            //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            ////transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), rotationSpeed * Time.deltaTime);
+            ////transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
     }
 }
