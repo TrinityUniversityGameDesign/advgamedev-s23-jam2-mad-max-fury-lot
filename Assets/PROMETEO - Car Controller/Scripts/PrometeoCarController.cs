@@ -13,10 +13,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PrometeoCarController : MonoBehaviour
 {
-
     //CAR SETUP
 
       [Space(20)]
@@ -289,41 +289,41 @@ public class PrometeoCarController : MonoBehaviour
       */
       if (useTouchControls && touchControlsSetup){
 
-        if(throttlePTI.buttonPressed){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoForward();
-        }
-        if(reversePTI.buttonPressed){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoReverse();
-        }
+        //if(throttlePTI.buttonPressed){
+        //  CancelInvoke("DecelerateCar");
+        //  deceleratingCar = false;
+        //  GoForward();
+        //}
+        //if(reversePTI.buttonPressed){
+        //  CancelInvoke("DecelerateCar");
+        //  deceleratingCar = false;
+        //  GoReverse();
+        //}
 
-        if(turnLeftPTI.buttonPressed){
-          TurnLeft();
-        }
-        if(turnRightPTI.buttonPressed){
-          TurnRight();
-        }
-        if(handbrakePTI.buttonPressed){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          Handbrake();
-        }
-        if(!handbrakePTI.buttonPressed){
-          RecoverTraction();
-        }
-        if((!throttlePTI.buttonPressed && !reversePTI.buttonPressed)){
-          ThrottleOff();
-        }
-        if((!reversePTI.buttonPressed && !throttlePTI.buttonPressed) && !handbrakePTI.buttonPressed && !deceleratingCar){
-          InvokeRepeating("DecelerateCar", 0f, 0.1f);
-          deceleratingCar = true;
-        }
-        if(!turnLeftPTI.buttonPressed && !turnRightPTI.buttonPressed && steeringAxis != 0f){
-          ResetSteeringAngle();
-        }
+        //if(turnLeftPTI.buttonPressed){
+        //  TurnLeft();
+        //}
+        //if(turnRightPTI.buttonPressed){
+        //  TurnRight();
+        //}
+        //if(handbrakePTI.buttonPressed){
+        //  CancelInvoke("DecelerateCar");
+        //  deceleratingCar = false;
+        //  Handbrake();
+        //}
+        //if(!handbrakePTI.buttonPressed){
+        //  RecoverTraction();
+        //}
+        //if((!throttlePTI.buttonPressed && !reversePTI.buttonPressed)){
+        //  ThrottleOff();
+        //}
+        //if((!reversePTI.buttonPressed && !throttlePTI.buttonPressed) && !handbrakePTI.buttonPressed && !deceleratingCar){
+        //  InvokeRepeating("DecelerateCar", 0f, 0.1f);
+        //  deceleratingCar = true;
+        //}
+        //if(!turnLeftPTI.buttonPressed && !turnRightPTI.buttonPressed && steeringAxis != 0f){
+        //  ResetSteeringAngle();
+        //}
 
       }else{
 
@@ -364,8 +364,6 @@ public class PrometeoCarController : MonoBehaviour
         }
 
       }
-
-
       // We call the method AnimateWheelMeshes() in order to match the wheel collider movements with the 3D meshes of the wheels.
       AnimateWheelMeshes();
 
