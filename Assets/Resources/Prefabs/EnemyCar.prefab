@@ -45,10 +45,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 20
+  m_Speed: 200
   m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 150
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -71,7 +71,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints:
   - {fileID: 0}
-  - {fileID: 0}
+  moveSpeed: 5
+  rotationSpeed: 2
   waypointThreshold: 1
   agent: {fileID: 1857874053}
 --- !u!1001 &648364440236282254
@@ -126,6 +127,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8594726889638233118, guid: 828e206a246227e478d2d4f5a6d5460c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594726889638233118, guid: 828e206a246227e478d2d4f5a6d5460c, type: 3}
       propertyPath: carSpeedText
       value: 
       objectReference: {fileID: 0}
@@ -178,7 +183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2092986729289397999, guid: 1e09958904af33542a6bdb8548df5cfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.169998
+      value: -8.17
       objectReference: {fileID: 0}
     - target: {fileID: 2092986729289397999, guid: 1e09958904af33542a6bdb8548df5cfd, type: 3}
       propertyPath: m_LocalRotation.w
