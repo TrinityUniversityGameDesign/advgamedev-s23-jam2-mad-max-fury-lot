@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     private bool isAtWaypoint = false;          // Flag to check if the AI is at the current waypoint
 
 
+    private bool parked = false;
     public NavMeshAgent agent;
 
     void Update()
@@ -24,7 +25,8 @@ public class EnemyController : MonoBehaviour
             // If the AI has reached the last waypoint, set the index to 0 to loop through the array
             if (currentWaypointIndex == waypoints.Length - 1)
             {
-                currentWaypointIndex = 0;
+                parked = true;
+                //currentWaypointIndex = 0;
             }
             // Otherwise, increment the waypoint index
             else
@@ -48,6 +50,11 @@ public class EnemyController : MonoBehaviour
             agent.SetDestination(waypoints[currentWaypointIndex].position);
             ////transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), rotationSpeed * Time.deltaTime);
             ////transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        }
+
+        if(parked == true)
+        {
+            agent.SetDestination(waypoints[currentWaypointIndex].position);
         }
     }
 }
