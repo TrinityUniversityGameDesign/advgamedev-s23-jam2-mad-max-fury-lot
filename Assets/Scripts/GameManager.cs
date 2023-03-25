@@ -47,12 +47,23 @@ public class GameManager : MonoBehaviour
 
     #region Player Variables
     public int coinAmt;
+
+    public int maxSpeed;
+    public int acceleration;
+    public int grip; //Max Steer Angle
+    public int handling; //turn force/steering speed
+    public int brakes; // Breakforce 
     #endregion
 
     private void Awake()
     {
         Instance = this;
         Instance.coinAmt = PlayerPrefs.GetInt("coins");
+        Instance.maxSpeed = PlayerPrefs.GetInt("speed");
+        Instance.acceleration = PlayerPrefs.GetInt("accel");
+        Instance.grip = PlayerPrefs.GetInt("grip");
+        Instance.handling = PlayerPrefs.GetInt("handling");
+        Instance.brakes = PlayerPrefs.GetInt("brakes");
         DontDestroyOnLoad(gameObject);
     }
 
@@ -76,14 +87,19 @@ public class GameManager : MonoBehaviour
         switch (Instance._state)
         {
             case GameState.StartScreen:
+                Debug.Log("Entering Start Screen");
                 break;
             case GameState.Paused:
+                Debug.Log("Entering Paused");
                 break;
             case GameState.Racing:
+                Debug.Log("Entering Race");
                 break;
             case GameState.Upgrade:
+                Debug.Log("Entering Upgrade");
                 break;
             case GameState.Race_Select:
+                Debug.Log("Entering Race Select");
                 break;
             default:
                 break;
@@ -131,6 +147,14 @@ public class GameManager : MonoBehaviour
                 RacingEnd.Invoke();
                 break;
             case GameState.Upgrade:
+
+                PlayerPrefs.SetInt("coins", Instance.coinAmt);
+                PlayerPrefs.SetInt("speed", Instance.maxSpeed);
+                PlayerPrefs.SetInt("accel", Instance.acceleration);
+                PlayerPrefs.SetInt("grip", Instance.grip);
+                PlayerPrefs.SetInt("handling", Instance.handling);
+                PlayerPrefs.SetInt("brakes", Instance.brakes);
+
                 UpgradeEnd.Invoke();
                 break;
             case GameState.Race_Select:
@@ -150,5 +174,6 @@ public class GameManager : MonoBehaviour
     {
         //Spawn enemies and change scenes to the one the player wnats
         SceneManager.LoadScene(Instance.SelectedLevel + 1);
+        OnStateEnter(GameState.Racing);
     }
 }
