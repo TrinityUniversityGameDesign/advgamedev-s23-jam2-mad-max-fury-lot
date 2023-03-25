@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Prefabs/START LINE.prefab.meta
 guid: 697d6e60ad7be46b3a934cb18dacff3a
 PrefabImporter:
+=======
+guid: 3f39affd54c4ccd4188db0bd9186c770
+DefaultImporter:
+>>>>>>> 61e7bfa7d140f3ce0890b31316016defbc48ca3e:Assets/Resources/Textures/deleteme.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

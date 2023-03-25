@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Prefabs/Spot Light.prefab.meta
 guid: b239d5044c2e343cf887d092ece78655
 PrefabImporter:
+=======
+guid: 2bf64b7a13338c546a1efa95297b7a81
+DefaultImporter:
+>>>>>>> 61e7bfa7d140f3ce0890b31316016defbc48ca3e:Assets/Resources/Materials/deleteme.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
