@@ -168,8 +168,7 @@ public class GameManager : MonoBehaviour
 
     void StartNewRace_GameManager()
     {
-        //Spawn enemies and change scenes to the one the player wnats
-        SceneManager.LoadScene(Instance.SelectedLevel + 1);
+        SceneManager.LoadScene(SelectedLevel);
         OnStateEnter(GameState.Racing);
     }
 }

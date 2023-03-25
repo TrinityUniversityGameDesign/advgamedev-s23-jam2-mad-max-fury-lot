@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Primary.unity
-    guid: b719f035757f85e4e8ddbd699db0e1fd
+    guid: 5d294e9d3b00f486195c7fc79886f6bf
   - enabled: 1
     path: Assets/Scenes/Fury Lot 1.unity
     guid: 8a1a44b912a3f4b8d96a6133594d1b15
