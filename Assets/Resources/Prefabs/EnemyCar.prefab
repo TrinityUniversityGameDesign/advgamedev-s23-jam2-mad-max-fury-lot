@@ -44,7 +44,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 200
+  m_Speed: 225
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -69,6 +69,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   waypointThreshold: 1
   agent: {fileID: 1857874053}
@@ -123,9 +132,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8594726889013369152, guid: 828e206a246227e478d2d4f5a6d5460c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8594726889638233118, guid: 828e206a246227e478d2d4f5a6d5460c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8594726889638233118, guid: 828e206a246227e478d2d4f5a6d5460c, type: 3}
       propertyPath: carSpeedText

@@ -15,8 +15,14 @@ public class EnemyController : MonoBehaviour
     private bool parked = false;
     public NavMeshAgent agent;
 
+    private void Start()
+    {
+        agent.SetDestination(GameObject.Find("FINISH LINE Variant").transform.position);
+    }
+
     void Update()
     {
+
         // Check if the AI is at the current waypoint
         if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < waypointThreshold)
         {
