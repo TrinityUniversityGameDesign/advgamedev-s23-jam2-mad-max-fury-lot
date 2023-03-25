@@ -287,7 +287,7 @@ public class PrometeoCarController : MonoBehaviour
       In this part of the code we specify what the car needs to do if the user presses W (throttle), S (reverse),
       A (turn left), D (turn right) or Space bar (handbrake).
       */
-      if (useTouchControls && touchControlsSetup){
+        if (useTouchControls && touchControlsSetup){
 
         //if(throttlePTI.buttonPressed){
         //  CancelInvoke("DecelerateCar");
@@ -325,48 +325,57 @@ public class PrometeoCarController : MonoBehaviour
         //  ResetSteeringAngle();
         //}
 
-      }else{
+        }else{
 
         if(Input.GetKey(KeyCode.W)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoForward();
+            CancelInvoke("DecelerateCar");
+            deceleratingCar = false;
+            GoForward();
         }
         if(Input.GetKey(KeyCode.S)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          GoReverse();
+            CancelInvoke("DecelerateCar");
+            deceleratingCar = false;
+            GoReverse();
         }
 
         if(Input.GetKey(KeyCode.A)){
-          TurnLeft();
+            TurnLeft();
         }
         if(Input.GetKey(KeyCode.D)){
-          TurnRight();
+            TurnRight();
         }
         if(Input.GetKey(KeyCode.Space)){
-          CancelInvoke("DecelerateCar");
-          deceleratingCar = false;
-          Handbrake();
+            CancelInvoke("DecelerateCar");
+            deceleratingCar = false;
+            Handbrake();
         }
         if(Input.GetKeyUp(KeyCode.Space)){
-          RecoverTraction();
+            RecoverTraction();
         }
         if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))){
-          ThrottleOff();
+            ThrottleOff();
         }
         if((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar){
-          InvokeRepeating("DecelerateCar", 0f, 0.1f);
-          deceleratingCar = true;
+            InvokeRepeating("DecelerateCar", 0f, 0.1f);
+            deceleratingCar = true;
         }
         if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f){
-          ResetSteeringAngle();
+            ResetSteeringAngle();
         }
 
-      }
-      // We call the method AnimateWheelMeshes() in order to match the wheel collider movements with the 3D meshes of the wheels.
-      AnimateWheelMeshes();
+        }
+        // We call the method AnimateWheelMeshes() in order to match the wheel collider movements with the 3D meshes of the wheels.
+        AnimateWheelMeshes();
 
+        
+
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 currAngle = transform.GetChild(0).rotation.eulerAngles;
+        currAngle = new Vector3(currAngle.x, currAngle.y, localVelocityX * 2);
+        transform.GetChild(0).rotation = Quaternion.Euler(currAngle);
     }
 
     // This method converts the car speed data from float to string, and then set the text of the UI carSpeedText with this value.
