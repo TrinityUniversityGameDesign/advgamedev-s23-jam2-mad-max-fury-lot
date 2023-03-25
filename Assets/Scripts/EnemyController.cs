@@ -4,8 +4,8 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public Transform[] waypoints;               // The array of waypoints to follow
-    public float moveSpeed = 5.0f;              // The movement speed of the AI
-    public float rotationSpeed = 2.0f;          // The rotation speed of the AI
+    //public float moveSpeed = 5.0f;              // The movement speed of the AI
+    //public float rotationSpeed = 2.0f;          // The rotation speed of the AI
     public float waypointThreshold = 1.0f;      // The distance threshold for considering a waypoint as reached
 
     private int currentWaypointIndex = 0;       // The index of the current waypoint
@@ -42,6 +42,9 @@ public class EnemyController : MonoBehaviour
         {
             //Vector3 targetDirection = waypoints[currentWaypointIndex].position - transform.position;
             //targetDirection.y = 0.0f;
+            Debug.Log("currentWaypointIndex" + currentWaypointIndex);
+            Debug.Log("position to go to " + waypoints[currentWaypointIndex].position);
+
             agent.SetDestination(waypoints[currentWaypointIndex].position);
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), rotationSpeed * Time.deltaTime);
             //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
