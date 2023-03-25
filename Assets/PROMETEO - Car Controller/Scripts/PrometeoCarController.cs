@@ -162,17 +162,17 @@ public class PrometeoCarController : MonoBehaviour
     void Start()
     {
 
-        if(GameManager.Instance == null)
-        {
-            Debug.LogError("GAME MANAGER WAS NULL SOMEHOW");
-        } else
-        {
-            maxSpeed = GameManager.Instance.maxSpeed;
-            accelerationMultiplier = GameManager.Instance.acceleration;
-            maxSteeringAngle = GameManager.Instance.grip;
-            steeringSpeed = GameManager.Instance.handling;
-            brakeForce = GameManager.Instance.brakes;
-        }
+        //if(GameManager.Instance == null)
+        //{
+        //    Debug.LogError("GAME MANAGER WAS NULL SOMEHOW");
+        //} else
+        //{
+        //    maxSpeed = GameManager.Instance.maxSpeed;
+        //    accelerationMultiplier = GameManager.Instance.acceleration;
+        //    maxSteeringAngle = GameManager.Instance.grip;
+        //    steeringSpeed = GameManager.Instance.handling;
+        //    brakeForce = GameManager.Instance.brakes;
+        //}
 
       //In this part, we set the 'carRigidbody' value with the Rigidbody attached to this
       //gameObject. Also, we define the center of mass of the car with the Vector3 given

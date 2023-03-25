@@ -145,8 +145,8 @@ MonoBehaviour:
   finishLine: {fileID: 0}
   startLine: {fileID: 0}
   SelectedLevel: 1
-  coinAmt: 0
-  maxSpeed: 0
+  coinAmt: 50
+  maxSpeed: 190
   acceleration: 0
   grip: 0
   handling: 0
