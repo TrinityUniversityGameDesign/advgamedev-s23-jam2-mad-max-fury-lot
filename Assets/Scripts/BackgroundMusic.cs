@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class BackgroundMusic : MonoBehaviour
@@ -39,6 +40,11 @@ public class BackgroundMusic : MonoBehaviour
     private void PlayClickSound()
     {
         aud.PlayOneShot(clickSound);
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene("Primary");
     }
 
     //void SwitchToGameMusic()

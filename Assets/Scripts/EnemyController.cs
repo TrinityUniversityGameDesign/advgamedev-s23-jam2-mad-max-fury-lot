@@ -56,17 +56,14 @@ public class EnemyController : MonoBehaviour
     private void moveCarsPlease()
     {
         
-        //Vector3 targetDirection = waypoints[currentWaypointIndex].position - transform.position;
-        //targetDirection.y = 0.0f;
         Debug.Log("currentWaypointIndex" + currentWaypointIndex);
         Debug.Log("position to go to " + waypoints[currentWaypointIndex].position);
 
         agent.SetDestination(waypoints[currentWaypointIndex].position);
-        ////transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), rotationSpeed * Time.deltaTime);
-        ////transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 
         if (parked == true)
         {
+            Debug.Log("won");
             transform.position = waypoints[currentWaypointIndex].position;
         }
     }
