@@ -3229,13 +3229,25 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[9]
       value: 
       objectReference: {fileID: 146976700}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_Acceleration
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Name
       value: EnemyCar (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7221612506329872941, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_RootOrder
@@ -3448,6 +3460,18 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[9]
       value: 
       objectReference: {fileID: 146976700}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_Speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_Acceleration
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Name
       value: EnemyCar (4)
@@ -3954,13 +3978,25 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[9]
       value: 
       objectReference: {fileID: 146976700}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_Acceleration
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Name
       value: EnemyCar (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7221612506329872941, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_RootOrder
@@ -4299,11 +4335,15 @@ PrefabInstance:
       objectReference: {fileID: 146976700}
     - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Speed
-      value: 100
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_Acceleration
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_AngularSpeed
-      value: 20
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Name
@@ -4311,7 +4351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7221612506329872941, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_RootOrder
