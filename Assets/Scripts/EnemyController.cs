@@ -17,7 +17,8 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        agent.SetDestination(GameObject.Find("FINISH LINE Variant").transform.position);
+        moveCarsPlease();
+        //agent.SetDestination(GameObject.Find("FINISH LINE Variant").transform.position);
     }
 
     void Update()
@@ -33,7 +34,7 @@ public class EnemyController : MonoBehaviour
             {
                 currentWaypointIndex = waypoints.Length - 1;
                 parked = true;
-                currentWaypointIndex = 0;
+                //currentWaypointIndex = 0;
             }
             // Otherwise, increment the waypoint index
             else
