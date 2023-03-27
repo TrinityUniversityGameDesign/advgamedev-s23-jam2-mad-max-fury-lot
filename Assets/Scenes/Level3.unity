@@ -1665,6 +1665,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1857874052, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: waypointThreshold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874052, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 845934040}
@@ -1704,6 +1708,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[9]
       value: 
       objectReference: {fileID: 146976700}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Name
       value: EnemyCar
@@ -2600,7 +2608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59bdb0d16e5634ba08c130293fbe2f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusic: {fileID: 8300000, guid: d5fd75381a74247fc91a0d7e325306f4, type: 3}
+  menuMusic: {fileID: 8300000, guid: a1c924ddd294446b880bce4ef72d9ca9, type: 3}
   clickSound: {fileID: 8300000, guid: bcd207fc8752f464bb73a3c3295c6439, type: 3}
 --- !u!82 &1150281593
 AudioSource:
@@ -3080,7 +3088,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303074844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -54.7, y: -42.096, z: 109.2}
+  m_LocalPosition: {x: -39, y: -42.096, z: 109.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4263,7 +4271,11 @@ PrefabInstance:
       objectReference: {fileID: 146976700}
     - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Speed
-      value: 175
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857874053, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1142066822619803002, guid: b59ed275e74e640adbcc2580d3da606d, type: 3}
       propertyPath: m_Name
